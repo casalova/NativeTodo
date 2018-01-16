@@ -35,15 +35,14 @@
       "../types",
       "./node_modules/@types",
       "../../node_modules/@types"
-    ]
+    ],
+    "types": ["react", "react-native", "jest"],
+    "outDir": "./lib"
   },
   "exclude": ["node_modules", "typings/browser", "typings/browser.d.ts"],
   "include": ["src"],
   "compileOnSave": false,
   "buildOnSave": false,
-  "atom": {
-    "rewriteTsconfig": false
-  },
   "awesome-typescript-loader": {
     "useCache": true
   }

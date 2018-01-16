@@ -1,0 +1,2 @@
+ts-watch: yarn run build:watch
+react-native: yarn run start:native

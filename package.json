@@ -3,8 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build:watch": "tsc -w ",
-    "start": "yarn run build:watch && node node_modules/react-native/local-cli/cli.js start",
+    "build:watch": "tsc -w",
+    "start:native": "node node_modules/react-native/local-cli/cli.js start",
+    "start": "nf -j Procfile.dev start",
     "test": "jest"
   },
   "dependencies": {
@@ -13,12 +14,21 @@
     "typescript": "^2.6.2"
   },
   "devDependencies": {
+    "@types/jest": "^22.0.1",
     "@types/react": "^16.0.34",
     "@types/react-native": "^0.52.0",
     "babel-jest": "22.1.0",
     "babel-preset-react-native": "4.0.0",
+    "foreman": "^2.0.0",
     "jest": "22.1.1",
+    "prettier": "^1.10.2",
     "react-test-renderer": "16.2.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,graphql,gql,json,scss,css}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "jest": {
     "preset": "react-native"
