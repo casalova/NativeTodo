@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "allowJs": false,
+    "target": "es6",
+    "moduleResolution": "node",
+    "jsx": "react-native",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declaration": false,
+    "noImplicitAny": false,
+    "noImplicitUseStrict": false,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": false,
+    "noLib": false,
+    "preserveConstEnums": true,
+    "sourceMap": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "pretty": true,
+    "rootDir": "./src",
+    "baseUrl": ".",
+    "paths": {
+      "*": ["*", "./types/*", "../types/*"],
+      "client/*": ["./src/client/*"],
+      "__tests__/*": ["./src/__tests__/*"],
+      "server/*": ["./src/server/*"],
+      "universal/*": ["./src/universal/*"],
+      "react": ["node_modules/@types/react"]
+    },
+    "lib": ["es2017", "dom", "esnext.asynciterable"],
+    "typeRoots": [
+      "./types",
+      "../types",
+      "./node_modules/@types",
+      "../../node_modules/@types"
+    ]
+  },
+  "exclude": ["node_modules", "typings/browser", "typings/browser.d.ts"],
+  "include": ["src"],
+  "compileOnSave": false,
+  "buildOnSave": false,
+  "atom": {
+    "rewriteTsconfig": false
+  },
+  "awesome-typescript-loader": {
+    "useCache": true
+  }
+}
